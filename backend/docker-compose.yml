@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+  mongodb:
+    image: mongo:latest
+    container_name: mongodb
+    ports:
+      - "27017:27017"
+    networks:
+      - app-network
+    
+#  blogservice:
+#    build:
+#        context: ./blogservice
+#    container_name: blogservice
+#    depends_on:
+#      - mongodb
+#    environment:
+#      SPRING_DATA_MONGODB_URI: mongodb://mongodb:27017/BlogDatabase
+#    ports:
+#      - "8080:8080"
+#    networks:
+#      - app-network
+networks:
+  app-network:
+    driver: bridge
