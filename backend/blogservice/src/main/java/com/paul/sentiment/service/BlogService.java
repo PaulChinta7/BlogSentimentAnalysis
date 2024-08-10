@@ -4,6 +4,7 @@ import com.paul.sentiment.dto.BlogDto;
 import com.paul.sentiment.mapper.DataMapper;
 import com.paul.sentiment.model.Blog;
 import com.paul.sentiment.repository.BlogRepository;
+import lombok.RequiredArgsConstructor;
 import org.apache.coyote.Response;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -14,6 +15,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Service
+@RequiredArgsConstructor
 public class BlogService {
     
     @Autowired
