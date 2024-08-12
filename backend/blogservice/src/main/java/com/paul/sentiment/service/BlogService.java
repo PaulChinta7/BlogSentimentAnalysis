@@ -38,7 +38,6 @@ public class BlogService {
     public ResponseEntity<Void> addBlog(BlogDto blogDto) {
         Blog blog=dataMapper.MaptoBlog(blogDto);
         BlogDto fetched_blogDto=dataMapper.MaptoBlogDto(blogRepository.save(blog));
-        if(fetched_blogDto.getId()!=null) return ResponseEntity.status(HttpStatus.OK).build();
-        else   return ResponseEntity.status(HttpStatus.NOT_ACCEPTABLE).build();
+        return ResponseEntity.status(HttpStatus.NOT_ACCEPTABLE).build();
     }
 }

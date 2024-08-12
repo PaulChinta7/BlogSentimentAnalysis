@@ -88,6 +88,7 @@ class BlogServiceTest {
     @Test
     void addBlog() {
         Blog blog=Blog.builder()
+                .id("1001")
                 .username("Steve Carl")
                 .description("Oth nondisp fx of base of 1st MC bone, r hand, 7thB")
                 .image("http://dummyimage.com/223x100.png/dddddd/000000")
@@ -95,6 +96,7 @@ class BlogServiceTest {
                 .downVotes(10)
                 .build();
         BlogDto blogDto=BlogDto.builder()
+                .id("1001")
                 .username("Steve Carl")
                 .description("Oth nondisp fx of base of 1st MC bone, r hand, 7thB")
                 .image("http://dummyimage.com/223x100.png/dddddd/000000")
@@ -102,8 +104,10 @@ class BlogServiceTest {
                 .downVotes(10)
                 .build();
         when(blogRepository.save(blog)).thenReturn(blog);
-        when(dataMapper.MaptoBlogDto(blog)).thenReturn(blogDto);
+        when(dataMapper.MaptoBlog(blogDto)).thenReturn(blog);
         
-//        BlogDto fetched_blogDto=blogService.addBlog(blogDto);
+        blogService.addBlog(blogDto);
+        
+        verify(blogRepository,times(1)).save(blog);
     }
 }
