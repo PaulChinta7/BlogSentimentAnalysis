@@ -34,5 +34,11 @@ public class BlogService {
         return new ResponseEntity<>(blogs, HttpStatus.OK);
 //        Cannot connect to database Exception
     }
-    
+
+    public ResponseEntity<Void> addBlog(BlogDto blogDto) {
+        Blog blog=dataMapper.MaptoBlog(blogDto);
+        BlogDto fetched_blogDto=dataMapper.MaptoBlogDto(blogRepository.save(blog));
+        if(fetched_blogDto.getId()!=null) return ResponseEntity.status(HttpStatus.OK).build();
+        else   return ResponseEntity.status(HttpStatus.NOT_ACCEPTABLE).build();
+    }
 }

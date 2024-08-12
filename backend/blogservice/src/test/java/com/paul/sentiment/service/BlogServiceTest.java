@@ -83,10 +83,27 @@ class BlogServiceTest {
         
         
         verify(blogRepository,times(1)).findAll();
+    }
+
+    @Test
+    void addBlog() {
+        Blog blog=Blog.builder()
+                .username("Steve Carl")
+                .description("Oth nondisp fx of base of 1st MC bone, r hand, 7thB")
+                .image("http://dummyimage.com/223x100.png/dddddd/000000")
+                .upVotes(20)
+                .downVotes(10)
+                .build();
+        BlogDto blogDto=BlogDto.builder()
+                .username("Steve Carl")
+                .description("Oth nondisp fx of base of 1st MC bone, r hand, 7thB")
+                .image("http://dummyimage.com/223x100.png/dddddd/000000")
+                .upVotes(20)
+                .downVotes(10)
+                .build();
+        when(blogRepository.save(blog)).thenReturn(blog);
+        when(dataMapper.MaptoBlogDto(blog)).thenReturn(blogDto);
         
-        
-        
-        
-        
+//        BlogDto fetched_blogDto=blogService.addBlog(blogDto);
     }
 }

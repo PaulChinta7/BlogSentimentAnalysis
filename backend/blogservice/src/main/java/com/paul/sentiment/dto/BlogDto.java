@@ -11,7 +11,7 @@ import java.util.UUID;
 @NoArgsConstructor
 @AllArgsConstructor
 public class BlogDto {
-    private UUID id;
+    private String id;
     private String username;
     private String description;
     private String image;
