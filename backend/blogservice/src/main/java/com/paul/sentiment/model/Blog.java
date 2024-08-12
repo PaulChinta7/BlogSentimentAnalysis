@@ -4,9 +4,10 @@ import lombok.*;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import java.util.List;
 import java.util.UUID;
 
-@Document(value="Blogs")
+@Document(collection="Blogs")
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
@@ -20,6 +21,7 @@ public class Blog {
     private String image;
     private int upVotes;
     private int downVotes;
+    private List<Comment> comments;
     
     
     
