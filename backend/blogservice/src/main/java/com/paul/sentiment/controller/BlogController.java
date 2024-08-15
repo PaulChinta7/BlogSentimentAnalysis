@@ -15,7 +15,7 @@ import java.util.List;
 public class BlogController {
     @Autowired
     BlogService blogService;
-    
+    @CrossOrigin(origins = "http://localhost:3001")
     @GetMapping("/getblogs")
     public ResponseEntity<List<BlogDto>> getBlogs(){
         return blogService.getBlogs();

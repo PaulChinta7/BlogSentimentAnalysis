@@ -1,0 +1,138 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.profile-image-size{
+  width: 35px;
+  height: 35px;
+  border-radius: 18px;
+}
+.username-size{
+  font-size: 14px;
+}
+
+.id-size{
+  font-size: 10px;
+}
+.description{
+  padding: 5px 0px ;
+  font-size: 13px;
+  font-weight: 300;
+}
+.button{
+  width: 60px;
+  height: 20px;
+  font-size: 10px;
+  padding: 0px 10px;
+  border: none;
+  font-weight: 500;
+  background-color: black;
+  color: white;
+  transition: fade 0.1s;
+  border-radius: 3px;
+}
+.votes{
+  font-size: 14px;
+  padding: 0px 10px;
+  font-weight: 500;
+}
+.button:hover{
+  background-color: white;
+  color: black;
+}
+
+.comment{
+  background-color: #eeeeee;
+  border-radius: 2px;
+  padding: 5px;
+  border-bottom: #aaaaaa;
+  margin: 5px 0px;
+}
+.comment-username{
+  font-size: 10px;
+  font-weight: 500;
+}
+.comment-content{
+font-size: 10px;
+}
+.comments-heading{
+  text-decoration: none;
+  color: grey;
+  font-size: 10px;
+}
+
+.add-comment-heading{
+  font-size: 12px;
+
+}
+.add-comment{
+  background-color: #eeeeee;
+  border-radius: 2px;
+  padding: 5px;
+  border-bottom: #aaaaaa;
+  margin: 5px 0px;
+  
+}
+.add-comment-username{
+  padding: 0px 0px 5px 0px;
+ 
+}
+
+.add-comment-username input{
+  font-size: 10px;
+  font-weight: 500;
+  width: 200px;
+  outline: none;
+  
+  
+ 
+}
+.add-comment-content textarea{
+font-size: 10px;
+width: 100%;
+min-height:30px;
+resize: none;
+outline: none;
+}
+
+
+.placeholder-text{
+  font-size: 10px;
+  
+}
+.add-username input{
+  font-size: 10px;
+  width: 150px;
+  height: 20px;
+  font-weight: 400;
+  outline: none;
+}
+
+.add-description textarea{
+  font-size: 14px;
+width: 100%;
+min-height:30px;
+  resize: none;
+  outline: none;
+}
+
+.add-image input{
+  font-size: 10px;
+  width: 150px;
+  height: 20px;
+  font-weight: 400;
+  outline: none;
+}
+.post-width{
+  width: 430px;
+}
+
+.image-size{
+  width: 500px;
+  height: 100%;
+}
