@@ -3,10 +3,31 @@ import Comment from './Comment'
 import AddComment from './AddComment'
 import ThumbUpIcon from '@mui/icons-material/ThumbUp';
 import ThumbDownIcon from '@mui/icons-material/ThumbDown';
+import urls from "../url.json";
 const Post = (props) => {
   const blog=props.blog;
+  const [upVoteClicked,setUpVoteClicked]=useState(false);
+  const [downVoteClicked,setDownVoteClicked]=useState(false);
 
-
+  const handleUpVote= async()=>{
+    const response=await fetch(urls.Blog+"/blogs/upVote?id="+blog.id,{method:'Post'});
+    if(!response.ok){
+      const error_obj=await response.json();
+      console.log(error_obj.msg);
+      throw new Error("Network response was not ok");
+    }
+    setUpVoteClicked(true);
+    
+  }
+  const handleDownVote= async()=>{
+    const response=await fetch(urls.Blog+"/blogs/downVote?id="+blog.id,{method:'Post'});
+    if(!response.ok){
+      const error_obj=await response.json();
+      console.log(error_obj.msg);
+      throw new Error("Network response was not ok");
+    }
+    setDownVoteClicked(true);
+  }
   
   return (<>
   <div className="container post-width p-3 border bg-white">
@@ -28,9 +49,9 @@ const Post = (props) => {
     <div className="container d-flex py-2 px-4 text-start">
       
         <span className='votes'>{blog.upVotes}</span>
-      <ThumbUpIcon fontSize="small"/>
+      {upVoteClicked? <ThumbUpIcon style={{ fontSize: 14, color:"red"}} />: <ThumbUpIcon className='voteicon'  style={{ fontSize: 14}} onClick={handleUpVote}/>}
       <span className='votes'>{blog.downVotes}</span>
-      <ThumbDownIcon fontSize="small"/>
+      { downVoteClicked?<ThumbDownIcon style={{ fontSize: 14, color:"red"}}/>: <ThumbDownIcon className='voteicon'  style={{ fontSize: 14 }} onClick={handleDownVote}/>}
      
     </div>
     <div className="container text-start px-4 "> 

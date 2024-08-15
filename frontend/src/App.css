@@ -37,9 +37,16 @@
   border-radius: 3px;
 }
 .votes{
-  font-size: 14px;
-  padding: 0px 10px;
+  font-size: 10px;
+  padding: 0px 5px;
   font-weight: 500;
+}
+.voteicon{
+  color: black;
+  
+}
+.voteicon:hover{
+  color: gray;
 }
 .button:hover{
   background-color: white;

@@ -9,16 +9,25 @@ services:
     networks:
       - app-network
     
-#  blogservice:
+  blogservice:
+    build:
+        context: ./blogservice
+    container_name: blogservice
+    depends_on:
+      - mongodb
+    environment:
+      SPRING_DATA_MONGODB_URI: mongodb://mongodb:27017/BlogDatabase
+    ports:
+      - "8080:8080"
+    networks:
+      - app-network
+    
+#  frontend:
 #    build:
-#        context: ./blogservice
-#    container_name: blogservice
-#    depends_on:
-#      - mongodb
-#    environment:
-#      SPRING_DATA_MONGODB_URI: mongodb://mongodb:27017/BlogDatabase
+#      context: ../frontend
+#      dockerfile: Dockerfile
 #    ports:
-#      - "8080:8080"
+#      - "3000:3000"
 #    networks:
 #      - app-network
 networks:
