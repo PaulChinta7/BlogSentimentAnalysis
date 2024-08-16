@@ -1,3 +1,4 @@
 {
-    "Blog":"http://localhost:8080"
+    "Blog":"http://localhost:8080",
+    "Analyser":"http://localhost:5000"
 }

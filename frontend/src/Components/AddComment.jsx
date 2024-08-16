@@ -14,7 +14,7 @@ const AddComment = (props) => {
         setUsername("");
          
     try {
-        const response = await fetch(urls.Blog+'/blogs/addComment?id='+postId, {
+        const response = await fetch(urls.Analyser+'/addComment?id='+postId, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
