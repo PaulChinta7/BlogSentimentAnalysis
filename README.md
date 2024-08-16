@@ -28,11 +28,12 @@ The Blog Service listens for comment events and updates the blog posts according
 # Setup and Installation
 Clone the Repository
 
-bash
-Copy code
-git clone https://github.com/yourusername/BlogSentimentAnalysis.git
+```
+git clone PaulChinta7/BlogSentimentAnalysis.git
 cd BlogSentimentAnalysis
-Running the Services
+```
+
+### Running the Services
 
 Backend (Blog Service):
 Navigate to the backend folder and run the Spring Boot application.
@@ -61,8 +62,25 @@ cd frontend
 npm start
 ```
 
+## How It Works
 
+### Creating and Managing Posts:
+> Users can create blog posts, add images, text, and interact with the posts through upvotes and downvotes.
+
+### Comment Analysis:
+> When a comment is added, it is sent to the NLP Service for sentiment analysis.
+The NLP Service processes the comment using a custom model and determines its sentiment.
+
+###  Comment Integration:
+> The sentiment result, along with the comment details, is sent back to the Blog Service using Kafka.
+The Blog Service updates the post with the new comment, sorted by sentiment.
+
+### Display:
+> Comments are displayed on the blog posts in order of sentiment, with positive comments shown first.
+
+
+Contact
+For any questions or inquiries, please contact paulchinta7@gmail.com.
 
 ![post](https://github.com/user-attachments/assets/3bc6401a-2f4f-46a8-869f-a0325cefa063)
 
-![image](https://github.com/user-attachments/assets/5640c0d6-5526-45a9-9ad4-7d678a18f871)
