@@ -61,6 +61,12 @@ Navigate to the frontend folder and start the development server.
 cd frontend
 npm start
 ```
+Kaggle Dataset: You will find the ipynb file in the backend-ml folder along with the pickle file for the model and tokenizer.
+```
+https://www.kaggle.com/datasets/cosmos98/twitter-and-reddit-sentimental-analysis-dataset/data
+cd backend-ml
+```
+
 
 ## How It Works
 
@@ -81,6 +87,8 @@ The Blog Service updates the post with the new comment, sorted by sentiment.
 
 Contact
 For any questions or inquiries, please contact paulchinta7@gmail.com.
+![image](https://github.com/user-attachments/assets/cba72a91-adb9-4071-b95f-56f70733c490)
+![BlogsentimentPostGif](https://github.com/user-attachments/assets/2cc0435d-1bb6-45b5-b9dd-4cc5549ef7ca)
+![post](https://github.com/user-attachments/assets/4f2e371f-237c-4020-9d8c-c59e02e4d37b)
 
-![post](https://github.com/user-attachments/assets/3bc6401a-2f4f-46a8-869f-a0325cefa063)
 
