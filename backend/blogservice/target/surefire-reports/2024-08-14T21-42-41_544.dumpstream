@@ -1,5 +1,0 @@
-# Created at 2024-08-14T21:42:41.865
-Boot Manifest-JAR contains absolute paths in classpath 'D:\PROJECTS\BlogSentimentAnalysis\BlogSentimentAnalysis\backend\blogservice\target\test-classes'
-Hint: <argLine>-Djdk.net.URLClassPath.disableClassPathURLCheck=true</argLine>
-'other' has different root
-

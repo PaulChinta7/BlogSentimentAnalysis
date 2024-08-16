@@ -1,4 +1,5 @@
 com\paul\sentiment\exception\ErrorResponse.class
+com\paul\sentiment\KafkaConsumer\Consumer.class
 com\paul\sentiment\controller\BlogController.class
 com\paul\sentiment\model\Comment$CommentBuilder.class
 com\paul\sentiment\dto\BlogDto$BlogDtoBuilder.class
@@ -6,6 +7,7 @@ com\paul\sentiment\repository\BlogRepository.class
 com\paul\sentiment\mapper\DataMapper.class
 com\paul\sentiment\dto\CommentDto$CommentDtoBuilder.class
 com\paul\sentiment\exception\BlogNotFoundException.class
+com\paul\sentiment\event\CommentResponse$CommentResponseBuilder.class
 com\paul\sentiment\dto\CommentDto.class
 com\paul\sentiment\BlogServiceApplication.class
 com\paul\sentiment\exception\ErrorResponse$ErrorResponseBuilder.class
@@ -15,4 +17,5 @@ com\paul\sentiment\model\Blog.class
 com\paul\sentiment\dto\BlogDto.class
 com\paul\sentiment\model\Blog$BlogBuilder.class
 com\paul\sentiment\exception\GlobalExceptionHandler.class
+com\paul\sentiment\event\CommentResponse.class
 com\paul\sentiment\service\BlogService.class

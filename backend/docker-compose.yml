@@ -9,18 +9,19 @@ services:
     networks:
       - app-network
     
-  blogservice:
-    build:
-        context: ./blogservice
-    container_name: blogservice
-    depends_on:
-      - mongodb
-    environment:
-      SPRING_DATA_MONGODB_URI: mongodb://mongodb:27017/BlogDatabase
-    ports:
-      - "8080:8080"
-    networks:
-      - app-network
+#  blogservice:
+#    build:
+#        context: ./blogservice
+#    container_name: blogservice
+#    depends_on:
+#      - mongodb
+#      - broker
+#    environment:
+#      SPRING_DATA_MONGODB_URI: mongodb://mongodb:27017/BlogDatabase
+#    ports:
+#      - "8080:8080"
+#    networks:
+#      - app-network
   
   zookeeper:
     image: confluentinc/cp-zookeeper:7.0.1
@@ -43,12 +44,18 @@ services:
       KAFKA_ZOOKEEPER_CONNECT: 'zookeeper:2181'
       KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT,PLAINTEXT_INTERNAL:PLAINTEXT
       KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://localhost:9092,PLAINTEXT_INTERNAL://broker:29092
-      #      KAFKA_INTER_BROKER_LISTENER_NAME: PLAINTEXT
       KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
       KAFKA_TRANSACTION_STATE_LOG_MIN_ISR: 1
       KAFKA_TRANSACTION_STATE_LOG_REPLICATION_FACTOR: 1
 
 
+#
+#  web:
+#    image: my-flask-app
+#    build: ../backend-ml
+#    ports:
+#      - "5000:5000"
+#      
 #  frontend:
 #    build:
 #      context: ../frontend
